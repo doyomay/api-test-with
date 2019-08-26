@@ -1,0 +1,17 @@
+version: "3"
+services:
+  app:
+    container_name: api-test-with-mongo
+    restart: always
+    build: ./
+    ports:
+      - "80:3333"
+    volumes:
+      - .:/app
+    links:
+      - mdb
+  mdb:
+    container_name: mdb
+    image: mongo
+    ports:
+      - "27017:27017"
