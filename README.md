@@ -26,3 +26,8 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+
+Example of uri for connection wiht mongo in docker
+```
+DB_CONNECTION_STRING=mongodb://mdb:27017/autogestion
+```
